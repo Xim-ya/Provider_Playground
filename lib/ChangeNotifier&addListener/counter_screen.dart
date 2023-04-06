@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:provider_playground/change_notifier/counter_view_model.dart';
 import 'package:provider/provider.dart';
+import 'package:provider_playground/ChangeNotifier&addListener/counter_view_model.dart';
 
-class ProviderWrapper extends StatelessWidget {
-  const ProviderWrapper({Key? key}) : super(key: key);
+class CounterScreen3 extends StatefulWidget {
+  const CounterScreen3({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-        create: (_) => CounterViewModel(), child: const CounterScreen());
-  }
+  State<CounterScreen3> createState() => _CounterScreen3State();
 }
 
-class CounterScreen extends StatelessWidget {
-  const CounterScreen({Key? key}) : super(key: key);
+class _CounterScreen3State extends State<CounterScreen3> {
+  final vm = CounterViewModel();
+
+  @override
+  void initState() {
+    super.initState();
+
+    vm.addListener(() {
+      print("Changed");
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,18 +34,16 @@ class CounterScreen extends StatelessWidget {
               const Text('Rebuild UI by ChangeNotifier / Provider.of approach'),
               const SizedBox(height: 10),
               Text(
-                context.watch<CounterViewModel>().count.toString(),
+                vm.count.toString(),
                 style: Theme.of(context).textTheme.headlineLarge,
               ),
-              const CounterView(),
+              // const CounterView(),
             ],
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // final vm = Provider.of<CounterViewModel>(context, listen: false);
-          final vm = context.read<CounterViewModel>();
           vm.increase();
         },
         child: const Icon(Icons.add),

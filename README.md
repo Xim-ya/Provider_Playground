@@ -15,7 +15,11 @@
 - MVVVM 패턴을 준수
 
 
+[이동할 페이지로 가기](./lib/FutureProvider/about_future_provider.md)
+
+
 ### Provider.of
+- Provider.of를 이용하게 쉽게 ChangeNotifier 인스턴스에 접근할 수 잇음
 
 #### ViewModel
 ```dart

@@ -36,6 +36,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   provider: ^6.0.5
+  shimmer_animation: ^2.1.0+1 # Skeleton 처리 위젯
+  cached_network_image: ^3.2.2 # 네트워크 이미지 처리 관련
 
 
 dev_dependencies:
