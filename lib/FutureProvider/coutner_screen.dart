@@ -45,9 +45,10 @@ class CounterScreen extends StatelessWidget {
               const Text('You can use ethier provider.of or context extension'),
               const SizedBox(height: 10),
               Text(
-                context.read<int>().toString(),
+                context.watch<int>().toString(),
                 style: Theme.of(context).textTheme.headlineLarge,
               ),
+              const CounterView(),
               // const CounterView(),
             ],
           ),
