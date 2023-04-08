@@ -8,10 +8,4 @@ class CounterViewModel extends ChangeNotifier {
     notifyListeners();
     print("counter increased ==> $count");
   }
-
-  Future<void> asyncIncrease() async {
-    await Future.delayed(const Duration(seconds: 2));
-    count++;
-    notifyListeners();
-  }
 }

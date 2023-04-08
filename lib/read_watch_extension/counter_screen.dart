@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'counter_view_model.dart';
 
-class ProviderWrapper extends StatelessWidget {
-  const ProviderWrapper({Key? key}) : super(key: key);
+class ProviderWrapper2 extends StatelessWidget {
+  const ProviderWrapper2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +17,7 @@ class CounterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("Counter Screen build area Rebuilds");
     return Scaffold(
       appBar: AppBar(
         title: const Text("Using Change Notifier"),

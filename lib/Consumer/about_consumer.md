@@ -8,16 +8,12 @@
 ```dart 
 Consumer
 (
-Key? key,
-required Widget builder(BuildContext context, T
-value
-,
-Widget
-?
-child
-)
-,
-)
+    Key? key,
+    required Widget builder(BuildContext context, T
+    value,
+    Widget? child
+),
+
 ```
 
 ### 코드

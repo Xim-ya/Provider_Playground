@@ -47,7 +47,7 @@ class CounterScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           final vm = Provider.of<CounterViewModel>(context, listen: false);
-          vm.increase();
+          vm.asyncIncrease();
         },
         child: const Icon(Icons.add),
       ),
