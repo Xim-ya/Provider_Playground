@@ -20,7 +20,9 @@
 - #### [Provider.of](./lib/Provider.of/about_provider.of.md)
 - #### [read,watch Provider method extensions](./lib/read_watch_extension/about_read_wath_extension.md)
 - #### [Consumer](./lib/Consumer/about_consumer.md)
+- #### [Selector](./lib/Selector/about_selector.md)
 - #### [ProviderNotFountException, Builder Pattern](./lib/ProviderNotFoundExcption/about_provider_not_found_exception.md)
+
 
 
 

@@ -93,7 +93,7 @@ class CounterViewModel extends ChangeNotifier {
     notifyListeners();
     print("counter increased ==> $count");
   }
-}
+} 
 ```
 
 ### View
