@@ -7,54 +7,42 @@ class CounterScreen04 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("COUNTER SCREEN REBUILD");
-    return ChangeNotifierProvider(
-      create: (BuildContext context) => CounterViewModel(),
-      builder: (BuildContext context, _) {
-        return Scaffold(
-          appBar: AppBar(
-            title: const Text("Using Consumer"),
-          ),
-          body: Center(
-            child: FittedBox(
-              child: Selector<CounterViewModel, int>(
-                selector: (BuildContext context, CounterViewModel vm) =>
-                    vm.count,
-                builder: (_, int count, ___) {
-                  return Column(
-                    children: <Widget>[
-                      const Text('Rebuild UI by Consumer'),
-                      const SizedBox(height: 10),
-                      Text(
-                        count.toString(),
-                        style: Theme.of(context).textTheme.headlineLarge,
-                      ),
-                      const CounterView(),
-                    ],
-                  );
-                },
-              ),
-            ),
-          ),
-          floatingActionButton: FloatingActionButton(
+    return ChangeNotifierProvider<CounterViewModel>(
+      create: (_) => CounterViewModel(),
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text("Using Consumer"),
+        ),
+        body: const CounterWidget(),
+        floatingActionButton: Builder(builder: (context) {
+          return FloatingActionButton(
             onPressed: () {
-              final vm = Provider.of<CounterViewModel>(context, listen: false);
+              final vm = context.read<CounterViewModel>();
               vm.increase();
             },
             child: const Icon(Icons.add),
-          ),
-        );
-      },
+          );
+        }),
+      ),
     );
   }
 }
 
-class CounterView extends StatelessWidget {
-  const CounterView({Key? key}) : super(key: key);
+class CounterWidget extends StatelessWidget {
+  const CounterWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-        'Anohter Counter View ==> ${context.read<CounterViewModel>().count}');
+    return Center(
+      child: FittedBox(
+        child: Column(
+          children: [
+            const Text('Understanding ProviderFoundException'),
+            const SizedBox(height: 10),
+            Text('${context.watch<CounterViewModel>().count}')
+          ],
+        ),
+      ),
+    );
   }
 }

@@ -22,6 +22,8 @@
 - #### [Consumer](./lib/Consumer/about_consumer.md)
 - #### [Selector](./lib/Selector/about_selector.md)
 - #### [ProviderNotFountException, Builder Pattern](./lib/ProviderNotFoundExcption/about_provider_not_found_exception.md)
+- #### [How to avoid ProviderNotFoundException](./lib/ProviderNotFoundExcption/how_avoid_provider_not_found_exception.md)
+
 
 
 
