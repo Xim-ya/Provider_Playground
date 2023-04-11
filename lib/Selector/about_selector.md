@@ -42,7 +42,7 @@ class CounterViewModel extends ChangeNotifier {
 ```dart 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'counter_view_model.dart';
+import 'counter_screen.dart';
 
 class CounterScreen04 extends StatelessWidget {
   const CounterScreen04({Key? key}) : super(key: key);

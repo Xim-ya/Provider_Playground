@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider_playground/AnonymousRoute/route_screen.dart';
 import 'package:provider_playground/Consumer/counter_screen.dart';
 import 'package:provider_playground/FutureProvider/coutner_screen.dart';
 import 'package:provider_playground/Provider.of/counter_screen.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: CounterScreen04(),
+      home: RouteScreen(),
     );
   }
 }

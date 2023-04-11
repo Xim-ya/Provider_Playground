@@ -23,7 +23,7 @@ class CounterViewModel extends ChangeNotifier {
 #### View
 ```dart
 import 'package:flutter/material.dart';
-import 'package:provider_playground/change_notifier/counter_view_model.dart';
+import 'package:provider_playground/change_notifier/counter_screen.dart';
 import 'package:provider/provider.dart';
 
 class ProviderWrapper extends StatelessWidget {
